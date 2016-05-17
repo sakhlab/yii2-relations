@@ -43,7 +43,8 @@ php composer update
 Связи хранятся в отдельном поле (TEXT) в виде сериализованного массива. К модели, которая имплементирует \pistol88\relations\interfaces\Torelate и наследует AR, подключить поведение:
 
 ```php
-    function behaviors() {
+    function behaviors()
+    {
         return [
             'relations' => [
                 'class' => 'pistol88\relations\behaviors\AttachRelations',
@@ -51,6 +52,16 @@ php composer update
                 'inAttribute' => 'relations',
             ],
         ];
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+    
+    public function getId()
+    {
+        return $this->id;
     }
 ```
 
