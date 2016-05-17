@@ -66,13 +66,16 @@ class AttachRelations extends Behavior
         }
         
         $ids = [];
-        $relations = unserialize($this->owner->{$this->inAttribute});
-        foreach($relations as $model => $relatedIds) {
-            if($model == $this->relatedModel) {
-                $ids = array_merge($ids, $relatedIds);
+
+        if(!empty($this->owner->{$this->inAttribute})) {
+            $relations = unserialize($this->owner->{$this->inAttribute});
+            foreach($relations as $model => $relatedIds) {
+                if($model == $this->relatedModel) {
+                    $ids = array_merge($ids, $relatedIds);
+                }
             }
         }
-        
+
         if($ids) {
             return $find->where(['id' => $ids])->all();
         } else {
