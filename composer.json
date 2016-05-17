@@ -1,0 +1,33 @@
+{
+    "name": "pistol88/yii2-relations",
+    "description": "Модуль позволяет привязывать любые модели к любым моделям (пример - похожие товары и т.д.)",
+    "keywords": ["yii2", "yii2", "application", "images", "yii2-relations", "relations", "pistol88"],
+    "homepage": "https://github.com/pistol88/yii2-related",
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "support": {
+        "source": "https://github.com/pistol88/yii2-related"
+    },
+    "authors": [
+        {
+            "name": "Ilya Pistol",
+            "email": "pistol88@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*",
+        "yiisoft/yii2-bootstrap": "*",
+        "kartik-v/yii2-widget-fileinput": "*",
+        "newerton/yii2-fancybox": "dev-master"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "autoload": {
+        "psr-4": {
+            "pistol88\\relations\\": ""
+        }
+    }
+}
