@@ -37,12 +37,16 @@ class AttachRelations extends Behavior
         if($this->doResetRelations && yii::$app->request->post('send_relations')) {
             $this->doResetRelations = false;
             
-            $models = yii::$app->request->post('relations_models');
-            $ids = yii::$app->request->post('relations_ids');
-
             $relations = [];
-            foreach($models as $key => $model) {
-                $relations[$model][] = $ids[$key];
+            
+            $models = yii::$app->request->post('relations_models');
+            
+            if(!empty($models)) {
+                $ids = yii::$app->request->post('relations_ids');
+
+                foreach($models as $key => $model) {
+                    $relations[$model][] = $ids[$key];
+                }
             }
 
             $this->owner->{$this->inAttribute} = serialize($relations);
