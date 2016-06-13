@@ -11,7 +11,7 @@ use yii\helpers\Html;
     <div class="row pistol88-new-relation">
         <div class="col-md-12 col-lg-12">
             <div class="form-group">
-                <a href="<?=Url::toRoute(["relations/default/list", 'model' => $model->getRelatedModel()]);?>" class="pistol88-related-choise btn btn-success">Выбрать... <span class="glyphicon glyphicon-plus add-option"></span></a>
+                <a href="<?=Url::toRoute(["/relations/default/list", 'model' => $model->getRelatedModel()]);?>" class="pistol88-related-choise btn btn-success">Выбрать... <span class="glyphicon glyphicon-plus add-option"></span></a>
             </div>
         </div>
     </div>
