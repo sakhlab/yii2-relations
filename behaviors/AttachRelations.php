@@ -81,9 +81,9 @@ class AttachRelations extends Behavior
         }
 
         if($ids) {
-            return $find->where(['id' => $ids])->all();
+            return $find->where(['id' => $ids]);
         } else {
-            return [];
+            return null;
         }
     }
 }
