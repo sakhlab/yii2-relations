@@ -20,8 +20,11 @@ class Constructor extends \yii\base\Widget
     public function run()
     {
         $js = '';
-        foreach($this->model->getRelations() as $related) {
-            $js .= 'pistol88.relations.renderRow("'.str_replace('\\', '\\\\', $related::className()).'", "'.Html::encode($related->getId()).'", "'.Html::encode($related->getName()).'");';
+        
+        if($relations = $this->model->getRelations()->all()) {
+            foreach($relations as $related) {
+                $js .= 'pistol88.relations.renderRow("'.str_replace('\\', '\\\\', $related::className()).'", "'.Html::encode($related->getId()).'", "'.Html::encode($related->getName()).'");';
+            }
         }
         
         $this->getView()->registerJs($js);
