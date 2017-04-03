@@ -1,5 +1,5 @@
 {
-    "name": "pistol88/yii2-relations",
+    "name": "sakhlab/yii2-relations",
     "description": "Модуль позволяет привязывать любые модели к любым моделям (пример - похожие товары и т.д.)",
     "keywords": ["yii2", "yii2", "application", "images", "yii2-relations", "relations", "pistol88"],
     "homepage": "https://github.com/pistol88/yii2-relations",
@@ -20,7 +20,7 @@
         "yiisoft/yii2": "*",
         "yiisoft/yii2-bootstrap": "*",
         "kartik-v/yii2-widget-fileinput": "*",
-        "newerton/yii2-fancybox": "dev-master"
+        "newerton/yii2-fancybox": "*"
     },
     "config": {
         "process-timeout": 1800
